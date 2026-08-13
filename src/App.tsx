@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Login from './pages/Login';
@@ -6,7 +7,7 @@ import Licenses from './pages/Licenses';
 import Tenants from './pages/Tenants';
 import AuditLogs from './pages/AuditLogs';
 
-const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
+const ProtectedRoute = ({ children }: { children: ReactNode }) => {
   const token = localStorage.getItem('adminToken');
   if (!token) {
     return <Navigate to="/login" replace />;
