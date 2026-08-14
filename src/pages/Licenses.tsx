@@ -113,7 +113,10 @@ export default function Licenses() {
                   </span>
                 </td>
                 <td className="p-4 text-sm text-gray-500">
-                  {lic.expiresAt ? format(new Date(lic.expiresAt), 'MMM dd, yyyy') : 'Lifetime'}
+                  {lic.expiresAt 
+                    ? format(new Date(lic.expiresAt), 'MMM dd, yyyy') 
+                    : (lic.plan === 'lifetime' ? 'Lifetime' : (lic.status === 'AVAILABLE' ? 'Not Activated' : 'N/A'))
+                  }
                 </td>
                 <td className="p-4 text-right space-x-2">
                   {lic.status !== 'BLOCKED' ? (
