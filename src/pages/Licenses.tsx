@@ -69,6 +69,8 @@ export default function Licenses() {
               
               <div className="flex gap-4">
                 <select className="flex-1 border p-2 rounded" value={formData.plan} onChange={e => setFormData({...formData, plan: e.target.value})}>
+                  <option value="daily">Daily (1 Day)</option>
+                  <option value="weekly">Weekly (1 Week)</option>
                   <option value="monthly">Monthly</option>
                   <option value="yearly">Yearly</option>
                   <option value="lifetime">Lifetime</option>

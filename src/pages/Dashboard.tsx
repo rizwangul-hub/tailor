@@ -38,7 +38,15 @@ export default function Dashboard() {
 
       <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mt-8">
         <h2 className="text-xl font-bold mb-4">Subscription Breakdown</h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="p-4 bg-gray-50 rounded-lg text-center">
+            <p className="text-gray-500 text-sm font-medium">Daily</p>
+            <p className="text-3xl font-bold mt-2">{stats.subscriptions.daily}</p>
+          </div>
+          <div className="p-4 bg-gray-50 rounded-lg text-center">
+            <p className="text-gray-500 text-sm font-medium">Weekly</p>
+            <p className="text-3xl font-bold mt-2">{stats.subscriptions.weekly}</p>
+          </div>
           <div className="p-4 bg-gray-50 rounded-lg text-center">
             <p className="text-gray-500 text-sm font-medium">Monthly</p>
             <p className="text-3xl font-bold mt-2">{stats.subscriptions.monthly}</p>
@@ -47,7 +55,7 @@ export default function Dashboard() {
             <p className="text-gray-500 text-sm font-medium">Yearly</p>
             <p className="text-3xl font-bold mt-2">{stats.subscriptions.yearly}</p>
           </div>
-          <div className="p-4 bg-gray-50 rounded-lg text-center">
+          <div className="p-4 bg-gray-50 rounded-lg text-center md:col-span-1 col-span-2">
             <p className="text-gray-500 text-sm font-medium">Lifetime</p>
             <p className="text-3xl font-bold mt-2">{stats.subscriptions.lifetime}</p>
           </div>
